@@ -1,6 +1,27 @@
+:root{
+    --lanternsize: 400px;
+}
+
 body { 
+    background-color: #141414;
     margin: 0;
 }
 
+
+.navbar {
+    
+    background-color: red;
+    vertical-align: middle;
+    height: 5rem;
+    width: 100vw;
+
+    .logo {
+        height:100%;
+    }
+    .logo a img {
+        height: 90%;
+    }
+
+}
 
 

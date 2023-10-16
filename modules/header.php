@@ -8,3 +8,13 @@
     <title>L - <?php /* here will be code to get the current page's name */  ?></title>
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="http://localhost"><img src="../resources/images/L.png" alt="logo link"></a>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+    </header>
