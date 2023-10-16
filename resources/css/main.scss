@@ -3,18 +3,26 @@
 }
 
 body { 
-    background-color: #141414;
+    background-color: #0c0c0c;
     margin: 0;
 }
 
 
 .navbar {
-    
-    background-color: red;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+
+    background-color: rgb(0, 0, 0);
     vertical-align: middle;
     height: 5rem;
     width: 100vw;
-
+    
+    a {
+        text-decoration: none;
+        color: white;
+        margin: 1rem;
+    }
     .logo {
         height:100%;
     }
