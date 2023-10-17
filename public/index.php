@@ -1,9 +1,10 @@
 <?php
-session_start();
-require_once('../includes.php');
-require_once('../config.php');
-require_once('../src/account.php');
-$LoginHandler = new LoginHandler;
+// start session
+    session_start();
+    require_once('../functions/includes.php');
+    require_once('../functions/config.php');
+    require_once('../functions/account.php');
+    $LoginHandler = new LoginHandler;
 
 ?>
 
@@ -15,7 +16,7 @@ $LoginHandler = new LoginHandler;
 
 
 
-$LoginHandler->isUserLoggedIn();
+    $LoginHandler->isUserLoggedIn();
 
 
 
