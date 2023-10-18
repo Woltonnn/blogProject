@@ -16,14 +16,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- getting my stylesheet -->
-    <link rel="stylesheet" href="../resources/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <!-- code for the navigation bar -->
     <header>
         <div class="navbar">
             <div class="logo">
-                <a href="http://localhost"><img src="../resources/images/L.png" alt="logo link"></a>
+                <a href="http://localhost"><img src="images/L.png" alt="logo link"></a>
             </div>
             <div class="searchbar">
                 <input type="search" name="Lsearch" id="lSearch" placeholder="Type here to search...">

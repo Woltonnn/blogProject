@@ -10,7 +10,7 @@
     
     <div class="regRight">
         <div class="top">
-            <img src="../resources/images/L.png" alt="">
+            <img src="images/L.png" alt="">
             <div class="text">
                 Join your friends today!
             </div>
