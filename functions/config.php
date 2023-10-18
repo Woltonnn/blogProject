@@ -26,6 +26,7 @@ if(!defined("DB")) {
     define("DB", "blogwebsite");
 }
 
+
 $connection = mysqli_connect(DOM, USER, PASS, DB);
 
 // attempt to make database connection and return errorcode if connecting didn't go well
