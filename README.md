@@ -1,4 +1,4 @@
-# L - Lantern blog-website
+# L - Lantrn blog-website
 
 This is a website I'm making for a schoolproject 'Lantrn' or 'L' 
 
