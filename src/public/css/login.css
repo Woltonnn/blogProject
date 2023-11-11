@@ -1,0 +1,95 @@
+:root {
+  --mainBackground: #1f1f1f;
+  --navBackground:rgb(0, 0, 0);
+  --accentColor:cyan;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--mainBackground);
+  color: grey;
+  margin: 0;
+}
+
+.registerContainer {
+  width: 300px;
+  margin: 0 auto;
+  background-color: #111111;
+  border: 1px solid #000000;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+.registerContainer h2 {
+  text-align: center;
+}
+.registerContainer .form-group {
+  margin-bottom: 20px;
+}
+.registerContainer label {
+  display: block;
+  margin-bottom: 5px;
+}
+.registerContainer input[type=text],
+.registerContainer input[type=password] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.registerContainer input[type=submit] {
+  background-color: #17a6b9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.registerContainer input[type=submit]:hover {
+  background-color: rgb(20, 219, 209);
+}
+.registerContainer a {
+  color: white;
+}
+
+.login-container {
+  width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+.login-container h2 {
+  text-align: center;
+}
+.login-container .form-group {
+  margin-bottom: 20px;
+}
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+.login-container input[type=text],
+.login-container input[type=password] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-container input[type=submit] {
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.login-container input[type=submit]:hover {
+  background-color: #235a9e;
+}/*# sourceMappingURL=login.css.map */

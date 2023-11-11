@@ -1,0 +1,15 @@
+:root{
+    --mainBackground: #1f1f1f;
+    --navBackground:rgb(0, 0, 0);
+    --accentColor:cyan;
+
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+body { 
+    background-color: var(--mainBackground);
+    color: grey;
+    margin: 0;
+}

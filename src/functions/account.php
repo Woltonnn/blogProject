@@ -1,19 +1,28 @@
 <?php
-
-    class LoginHandler {
-        public function isUserLoggedIn():void{
+// !isset($_SESSION['is_loggedin_check'])
+    class loginHandler {
+        public function isUserLoggedIn() {
             if(!isset($_SESSION['is_loggedin_check']) || $_SESSION['is_loggedin_check'] == ""){
-                include("../pages/registrationForm.php");
+                return false;
             } elseif ($_SESSION['is_loggedin_check']) {
-                include("../pages/home.php");
+                return true;
             }
+        }
+
+
+        public function registerAccount() {
+            print('account created');
+        }
+
+
+        public function loginAccount() {
+
         }
     }
 
+// print("test");
 
 
 
 
 
-
-?>

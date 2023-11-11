@@ -1,16 +1,17 @@
 <?php
-// start session
+    // includes pagehandler from functions/pages.php
+    require_once('functions/pages.php');
+    $pageHandler = new pageHandler;
+
+    // start session
     session_start();
     require_once('config.php');
-    require_once('functions/account.php');
-    $LoginHandler = new LoginHandler;
+
+    // print_r($_SESSION);
 
 
-    include_once('../modules/header.php');
 
-    $_SESSION['is_loggedin_check'] = '';
-    // $_SESSION['is_loggedin_check'] = 'loggedin';
-    $LoginHandler->isUserLoggedIn();
 
-    include_once('../modules/footer.php');
-?>
+    $pageHandler->getPage();
+
+
