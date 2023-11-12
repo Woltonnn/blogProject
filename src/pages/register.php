@@ -1,25 +1,32 @@
-<div class="registerContainer">
-    <h2>Register now!</h2>
-    <form action="login.php" method="post">
-    <div class="form-group">
-        <label for="email">email:</label>
-        <input type="text" name="email" id="email" required>
+<div class="loginWrapper">
+    <div class="info">
+        <h1>Lantrn</h1>
+        <p>Join your friends today and stay up to date with the latest news, fashion, memes, trends and much more!</p>
+    </div>    
+    <div class="registerContainer">
+        
+        <h2>Register now!</h2>
+        
+        <form action="login.php" method="POST">
+            <div>
+                <input type="text" name="email" id="email" placeholder="email" required>
+            </div>
+            <div>
+                <input type="text" name="username" id="username" placeholder="Username" required>
+            </div>
+            <div>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+            <div>
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm password" required>
+            </div>
+            
+            <div class="flex">
+                <a href="?page=login">log in here</a>
+                <div>
+                    <input type="submit" value="Register">
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" required>
-    </div>
-    <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required>
-    </div>
-    <div class="form-group">
-        <label for="confirmPassword">Confirm password:</label>
-        <input type="text" name="confirmPassword" id="confirmPassword" required>
-    </div>
-    <a href="?">log in here</a>
-    <div class="form-group">
-        <input type="submit" value="Register">
-    </div>
-    </form>
 </div>

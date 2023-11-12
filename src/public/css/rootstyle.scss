@@ -1,5 +1,5 @@
 :root{
-    --mainBackground: #1f1f1f;
+    --mainBackground: #111111;
     --navBackground:rgb(0, 0, 0);
     --accentColor:cyan;
 
@@ -10,6 +10,6 @@
 }
 body { 
     background-color: var(--mainBackground);
-    color: grey;
+    color: rgb(255, 255, 255);
     margin: 0;
 }

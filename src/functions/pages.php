@@ -1,15 +1,17 @@
 <?php
     // includes
     require_once('account.php');
-
-
-
+    
     class pageHandler {
-        public function getPage() {
-            $LoginHandler = new loginHandler;
+        private $LoginHandler;
 
+        public function __construct() {
+            $this->LoginHandler = new LoginHandler();
+        }
+
+        public function getPage() {
             // check if user is logged in
-            if ($LoginHandler->isUserLoggedIn()) {
+            if ($this->LoginHandler->isUserLoggedIn()) {
                 // Check if [page] is specified
                 if (!empty($_GET['page'])) {
                     $page = $_GET['page'];
@@ -37,8 +39,6 @@
 
             $this->giveFoot();
         }
-
-
 
         private function giveHead($requestedHeader) {
             // include head
@@ -78,9 +78,22 @@
                 default:
                     // Handle cases where the requested page doesn't match any known pages
                     echo "404 Page not found.";
+            }
+        }
+
+        public function fetchTitle(){
+            if (!empty($_GET['page'])) {
+                $page = $_GET['page'];
+            } else {
+                if ($this->LoginHandler->isUserLoggedIn()) {
+                    $page = 'home';
+                } else {
+                    $page = 'login';
+                }
+            }
+            print($page);
         }
     }
-}
 
 
 

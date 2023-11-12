@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Setting metadata -->
-    <title>Lantrn - <?php /* here will be code to get the current page's name */  ?></title>
+    <title>Lantrn - <?php ;$pageHandler = new pageHandler;$pageHandler->fetchTitle();  ?></title>
     <link rel="icon" type="image/x-icon" href="images/L2.png">
     <meta name="author" content="Christian Woltinge">
     <meta name="description" content="Lantrn - The most actual and best blog to be! Join today to stay up to date with the latest events and be part of our community.">
