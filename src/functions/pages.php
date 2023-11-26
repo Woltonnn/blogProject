@@ -3,15 +3,15 @@
     require_once('account.php');
     
     class pageHandler {
-        private $LoginHandler;
+        private $accountHandler;
 
         public function __construct() {
-            $this->LoginHandler = new LoginHandler();
+            $this->accountHandler = new accountHandler();
         }
 
         public function getPage() {
             // check if user is logged in
-            if ($this->LoginHandler->isUserLoggedIn()) {
+            if ($this->accountHandler->isLoggedIn()) {
                 // Check if [page] is specified
                 if (!empty($_GET['page'])) {
                     $page = $_GET['page'];
@@ -19,8 +19,9 @@
                     $page = 'home';
                 }
                 // get page specific header and body
-                $this->giveHead('main');
+                $this->giveHead();
                 $this->requestPage($page);
+                $this->giveFoot();
 
             } else {
                 // check which login page needs to be shown
@@ -35,45 +36,50 @@
                 }
                 $this->giveHead('login');
                 $this->requestPage($page);
+                $this->giveFoot('login');
             }  
-
-            $this->giveFoot();
         }
 
-        private function giveHead($requestedHeader) {
+        private function giveHead($requestedHeader = 'head') {
             // include head
             switch ($requestedHeader) {
                 case 'main':
-                    include_once('../modules/pageHeaders/header.php');
+                    include_once('../template/headers/header.php');
                     break;
                 case 'login':
-                    include_once('../modules/pageHeaders/loginHeader.php');
+                    include_once('../template/headers/loginHeader.php');
                     break;
             }
         }
 
-        private function giveFoot() {
-            // include page end
-            include_once('../modules/footer.php');
+        private function giveFoot( $requestFooterParameter = "main") {
+            switch ($requestFooterParameter) {
+                case 'main':
+                    include_once('../template/footers/mainFooter.php');
+                    break;
+                case 'login':
+                    include_once('../template/footers/loginFooter.php');
+                    break;
+            }
         }
 
         private function requestPage($requestedPage) {
-            $tmpath = '../pages/';
+            $tmpath = '../template/';
             switch ($requestedPage) {
                 case 'home':
-                    include $tmpath . 'home.php';
+                    include_once $tmpath . 'home.php';
                     break;
                 case 'about':
-                    include $tmpath . 'about.php';
+                    include_once $tmpath . 'about.php';
                     break;
                 case 'contact':
-                    include $tmpath . 'contact.php';
+                    include_once $tmpath . 'contact.php';
                     break;
                 case 'login':
-                    include $tmpath . 'login.php';
+                    include_once $tmpath . 'login.php';
                     break;
                 case 'register':
-                    include $tmpath . 'register.php';
+                    include_once $tmpath . 'register.php';
                     break;
                 default:
                     // Handle cases where the requested page doesn't match any known pages
@@ -85,7 +91,7 @@
             if (!empty($_GET['page'])) {
                 $page = $_GET['page'];
             } else {
-                if ($this->LoginHandler->isUserLoggedIn()) {
+                if ($this->accountHandler->isLoggedIn()) {
                     $page = 'home';
                 } else {
                     $page = 'login';

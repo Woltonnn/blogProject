@@ -1,17 +1,17 @@
 <?php
-    // includes pagehandler from functions/pages.php
-    require_once('functions/pages.php');
-    $pageHandler = new pageHandler;
+// Requires
+require_once('config.php');
+require_once('functions/ini.php');
+require_once('functions/connDB.php');
+require_once('functions/pages.php');
 
-    // start session
-    session_start();
-    require_once('config.php');
-
-    // print_r($_SESSION);
-
+// $_SESSION['user_id'] = '';
+// $_SESSION['user_name'] = '';
 
 
+// Generates page
+$pageHandler = new pageHandler;
+$pageHandler->getPage();
 
-    $pageHandler->getPage();
-
+// var_dump($_SESSION);
 

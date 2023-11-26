@@ -1,0 +1,1 @@
+<p>Welcome <?php print $_SESSION['user_name'] ?></p>

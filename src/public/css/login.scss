@@ -1,13 +1,15 @@
-@import 'rootstyle';
+@import 'rootvalues';
 
 
-.loginWrapper {
+.wrapper {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 45%;
     transform: translate(-50%,-50%);
     display: flex;
     gap: 2rem;
+    align-items: center;
+    gap: 6rem;
 }
 
 .info {
@@ -15,7 +17,9 @@
 
     h1{
         font-size: 3rem;
-        color: #5a5a5a;
+    }
+    p {
+        color: #d3d3d3;
     }
 }
 
@@ -23,7 +27,7 @@
 .registerContainer {
     width: 300px;
     background-color: #202020;
-    box-shadow: 3px 3px 0.5rem var(--accentColor);
+    box-shadow: 3px 3px 1.4rem -5px var(--accentColor);
     padding: 20px;
     border-radius: 5px;
 
@@ -31,7 +35,7 @@
         margin-bottom: 10px;
     }
     h2 {
-        color: #5a5a5a;
+        color: white;
         width: 100%;
         margin-left: 1rem;
     }
@@ -49,7 +53,7 @@
         background-color: #17a6b9;
         color: #fff;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
         padding: 10px 20px;
         cursor: pointer;
         &:hover{
@@ -67,5 +71,59 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    .disclaimer {
+        font-size: x-small;
+        color:#9b9b9b;
+    }
+}
+
+.footer{
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translatex(-50%);
+    text-align: center;
+    
+
+    a, span{
+        font-size: small;
+        text-decoration: none;
+        color: #727272;
+        margin: 10px;
+        cursor: pointer;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+.accent{color:var(--accentColor);}
+
+.registrationError {
+    background-color: rgb(255, 217, 0);
+    margin: 2px;
+    font-size: small;
+    font-weight: bold;
+    padding: 2px;
+    color:black;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 650px) {
+    .wrapper{
+        max-width: 98vw;
+        max-width: 98svw;
+        top:38%;
+        flex-direction: column;
+        gap:1rem;
+    }
+    .loginContainer,
+    .registerContainer {
+        max-width: 80vw;
+        max-width: 80svw;
+    }
+    
+    .info {
+        max-width: 100%;
     }
 }

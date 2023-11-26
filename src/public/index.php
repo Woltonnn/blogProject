@@ -1,4 +1,2 @@
-<?php
-// Why u lookin at my code bro?
+<?php // Why u lookin at my code bro?
 include("../ini.php");
-?>
