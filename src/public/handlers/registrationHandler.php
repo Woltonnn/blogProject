@@ -48,8 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION['registration_errors'] = $errors;
         header("Location: /?page=register");
         die();
+
     } else {
-        $sql = "INSERT INTO account (username, email, password) VALUES ('$username', '$email', '$encryptedPassword');";
+        $dateTime = date("Y-m-d H:i:s");
+        $sql = "INSERT INTO account (username, email, password, datetime) VALUES ('$username', '$email', '$encryptedPassword', '$dateTime');";
+
+
         try {
             // execute Query and catch error if there is any
             if ($connection->query($sql) === TRUE) {
@@ -64,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 header("Location: /");
                 die();
             } else { 
-                throw new Exception("Error: " . $sql . "<br>" . $conn->error());
+                throw new Exception("Error: " . $sql . "<br>" . $connection->error);
             }
         } catch (Exception $e) {
 
